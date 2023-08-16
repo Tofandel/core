@@ -526,7 +526,7 @@ export interface IfConditionalExpression extends ConditionalExpression {
 export interface ForCodegenNode extends VNodeCall {
   isBlock: true
   tag: typeof FRAGMENT
-  props: undefined
+  props: ObjectExpression
   children: ForRenderListExpression
   patchFlag: string
   disableTracking: boolean
@@ -538,7 +538,7 @@ export interface ForRenderListExpression extends CallExpression {
 }
 
 export interface ForIteratorExpression extends FunctionExpression {
-  returns: BlockCodegenNode
+  returns: ForCodegenNode
 }
 
 // AST Utilities ---------------------------------------------------------------
